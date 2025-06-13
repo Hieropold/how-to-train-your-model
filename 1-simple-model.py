@@ -120,7 +120,7 @@ plt.tight_layout()
 plt.savefig("confusion_matrix.png")
 
 # Save the trained model to disk for later use
-model_path = "hint_lover_model.pkl"
+model_path = "model/hint_lover_model.pkl"
 joblib.dump(model, model_path)
 
 # Create and save feature importance distribution plot
@@ -134,7 +134,7 @@ plt.xlabel("Importance Score")
 plt.ylabel("Feature Count")
 plt.legend()
 plt.tight_layout()
-plt.savefig("feature_importance.png")
+plt.savefig("reports/feature_importance.png")
 
 # Create and save ROC curve
 # ROC curve shows the tradeoff between true positive rate and false positive rate
@@ -147,7 +147,7 @@ plt.ylabel("True Positive Rate")
 plt.title("ROC Curve")
 plt.grid()
 plt.tight_layout()
-plt.savefig("roc_curve.png")
+plt.savefig("reports/roc_curve.png")
 
 # Create and save Precision-Recall curve
 # Shows the tradeoff between precision (accuracy of positive predictions)
@@ -161,7 +161,7 @@ plt.ylabel("Precision")
 plt.title("Precision-Recall Curve")
 plt.grid()
 plt.tight_layout()
-plt.savefig("pr_curve.png")
+plt.savefig("reports/pr_curve.png")
 
 # === MODEL INTERPRETABILITY SECTION ===
 # Calculate SHAP (SHapley Additive exPlanations) values
